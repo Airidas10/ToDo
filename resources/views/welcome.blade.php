@@ -81,7 +81,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Bajeriai
+                    @foreach($jokes as $joke)
+                        {{ $joke->joke }}
+                    @endforeach
                 </div>
 
                 <div class="links">

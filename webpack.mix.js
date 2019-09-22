@@ -12,4 +12,22 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+    .sass('resources/sass/app.scss', 'public/css')
+    .browserSync({proxy: 'http://stats.wip',
+        reloadDebounce: 500,
+        ghostMode: {
+            scroll: false
+        },
+        files: [
+            'app/**/*.php',
+            'resources/views/**/*.php',
+            'resources/js/**/*.vue',
+            'resources/assets/img/**/*.png',
+            'resources/assets/img/**/*.jpg',
+            'resources/assets/img/**/*.svg',
+            'public/mix-manifest.json', 
+            'public/css/**/*.css',
+            'public/css/*.css',
+            'public/js/**/*.js',
+        ]
+    })
