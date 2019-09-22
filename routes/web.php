@@ -12,3 +12,10 @@
 */
 
 Route::get('/', 'JokesController@index');
+
+Auth::routes();
+
+Route::post('/addJoke', 'JokesController@store');
+Route::post('/deleteJoke', 'JokesController@delete');
+
+

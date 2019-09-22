@@ -12,8 +12,8 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
-    .browserSync({proxy: 'http://stats.wip',
+   .sass('resources/sass/app.scss', 'public/css')
+   .browserSync({proxy: 'http://stats.wip',
         reloadDebounce: 500,
         ghostMode: {
             scroll: false
@@ -30,4 +30,4 @@ mix.js('resources/js/app.js', 'public/js')
             'public/css/*.css',
             'public/js/**/*.js',
         ]
-    })
+    });
